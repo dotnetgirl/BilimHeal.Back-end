@@ -1,0 +1,6 @@
+@BilimHeal.Server_HostAddress = http://localhost:5188
+
+GET {{BilimHeal.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
