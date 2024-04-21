@@ -36,7 +36,6 @@ public class UsersController : BaseController
         /// </summary>
         /// <param name="params"></param>
         /// <returns></returns>
-        //[Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAllAsync([FromQuery] PaginationParams @params)
             => Ok(new Response
@@ -51,7 +50,6 @@ public class UsersController : BaseController
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        //[Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync([FromRoute(Name = "id")] long id)
             => Ok(new Response
@@ -68,7 +66,7 @@ public class UsersController : BaseController
         /// <param name="id"></param>
         /// <param name="dto"></param>
         /// <returns></returns>
-        //[Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin", "User")]
         [HttpPut("{id}")]
         public async Task<ActionResult<UserForResultDto>> PutAsync([FromRoute(Name = "id")] long id, [FromBody] UserForUpdateDto dto)
             => Ok(new Response
@@ -83,7 +81,6 @@ public class UsersController : BaseController
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        //[Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> DeleteAsync([FromRoute(Name = "id")] long id)
             => Ok(new Response

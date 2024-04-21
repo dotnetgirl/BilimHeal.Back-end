@@ -43,6 +43,8 @@ namespace BilimHeal.Server.API
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("AllowAll");
+
             app.UseHttpsRedirection();
 
             app.UseMiddleware<ExceptionHandlerMiddleware>();
