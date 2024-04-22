@@ -4,6 +4,5 @@ public enum QuestionFormat
 {
     MultipleCorrectAnswers,
     TrueFalse,
-    ShortAnswer,
-    FAQ,
+    ShortAnswer
 }
